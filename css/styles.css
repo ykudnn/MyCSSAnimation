@@ -81,3 +81,18 @@ div {
     transform: translateX(300px) rotate(360deg);
   }
 }
+
+.btn {
+  padding: 16px 32px;
+  background: hsl(200, 100%, 40%);
+  color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  
+  transition: background .3s;
+}
+
+.btn:hover {
+  background: hsl(200, 100%, 45%);
+}
