@@ -6,14 +6,13 @@ div {
   margin: 40px;
   text-align: center;
   line-height: 100px;
-}
-
-.box-1 {
 
   width: 100px;
   height: 100px;
   background: orange;
+}
 
+.box-1 {
   transition-property: transform;
   transition-duration: 1s;
 }
@@ -28,10 +27,6 @@ div {
 }
 
 .box-2 {
-  width: 100px;
-  height: 100px;
-  background: orange;
-
   transition-property: transform;
   transition-duration: 1s;
   
@@ -45,10 +40,6 @@ div {
 }
 
 .box-3 {
-  width: 100px;
-  height: 100px;
-  background: orange;
-  
   /*transition-property: transform;*/
   /*transition-duration: .3s;*/
   /*transition-timing-function: ease-out;*/
@@ -58,4 +49,35 @@ div {
 .box-3:hover {
   transform: translateX(30px); 
   background: skyblue;
+}
+
+.box-4 {
+  animation-name: move;
+  animation-duration: 2s;
+  /*animation-delay: 1s;*/
+  animation-fill-mode: forwards;
+  animation-iteration-count: 2;
+  /* animation-iteration-count: infinite; */
+  /* animation-direction: alternate; */
+  /* animation-direction: reverse; */
+  /* animation-direction: alternate-reverse; */
+}
+
+.box-5 {
+  /*animation-name: move;*/
+  /*animation-duration: 2s;*/
+  /*animation-iteration-count: infinite;*/
+  animation: move 2s infinite 1s;
+}
+
+@keyframes move {
+  0% {
+    transform: none;
+  }
+  80% {
+    transform: translateX(200px) rotate(360deg);
+  }
+  100% {
+    transform: translateX(300px) rotate(360deg);
+  }
 }
