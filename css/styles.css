@@ -4,8 +4,8 @@ body {
 
 div {
   margin: 40px;
-  text-align: center;
-  line-height: 100px;
+  /* text-align: center;
+  line-height: 100px; */
 }
 
 .box {
@@ -118,4 +118,43 @@ div {
   to {
     transform: rotate(360deg);
   }
+}
+
+.message {
+  width: 300px;
+  padding: 8px 16px;
+  background: #2c2c2c;
+  color: #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+
+  animation: popup 2s forwards;
+}
+
+@keyframes popup {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+    animation-timing-function: ease-out;
+  }
+  20%, 80% {
+    transform: none;
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(20px);
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+button {
+  width: 300px;
+  padding: 8px 16px;
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
 }
